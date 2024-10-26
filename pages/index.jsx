@@ -1,57 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import Layout from "@/components/layout";
 import ProjectCard from '@/components/ProjectCard'
 import Perticles from '@/components/Perticales';
 import "@/assets/css/main.min.css";
-import Navbar from '@/components/Navbar'
 import TypeName from '@/components/TypeName'
 import Footer from "@/components/footer";
+import ServiceCard from "@/components/serviceCard";
 
 export default function Index() {
-  useEffect(() => {
-    const e = document.querySelector('.intro');
-    setTimeout(() => {
-      e.classList.add("animate__hinge");
-    },2500)
-  
-      setTimeout(() => {
-        e.classList.add("hide");
-      }, 5000)
-  },[])
-
+ 
   return (
     <Layout>
       {/* intro section */}
-
-  {/* background web  */}
-    <div className="background" style={{zIndex:"-10",position:'fixed',top:0,opacity:"0.5"}}>
-        <Image
-        height={1080}
-        width={1920}
-        src="/image/background/background_3.png"
-          className="img-fluid"
-            alt="background"
-            />
-    </div>
-    {/*  background web  */}
-
-
-    <div className="animate__animated intro d-flex flex-column align-items-center justify-content-center">
-        <div className="col-md-3 col-5">
-            <Image src="/image/banner.jpg" height={500} width={500} className="img-fluid rounded-3"  alt="profile image"/>
-        </div>
-        <h1 className="text-uppercase border-2 border-white border-end text-white my-2">
-            Iftekher Mahmud...
-        </h1>
-        <div className="px-8 mx-5 border-2 border-bottom border-white" style={{width:"50%"}}></div>
-        <h4 className="text-uppercase mt-2 text-white">Full Stack Developer</h4>
-    </div>
-
-     {/* intro section  */}
-
-      <Navbar />
         <div id="home" className="container-fluid overflow-hidden position-relative">
 
           {/* <div className="position-absolute z-2">
@@ -61,16 +22,15 @@ export default function Index() {
           <div className="row pt-3 m-0 h-100 overflow-hidden">
             <div className="hero-content col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center p-2 m-0"
               data-aos="fade-right">
-              <h2 className="text-capitalize me-lg-9 me-md-4 me-sm-2">Welcome...!</h2>
-              <h3>I am <span className="text-capitalize text-decoration-none fw-bold text-primary">Iftekher
-                Mahmud (Pervez)</span>,
+
+              <h3>Hello, My name is <span className="text-capitalize text-decoration-none fw-bold text-primary">Iftekher
+                Mahmud.</span>
               </h3>
               <p className="fs-6 fw-medium">
-                a professional Full Stack web developer with 5+ years of experience crafting dynamic and
-                user-friendly web
-                solutions. In my journey in this field, I have acquired both front-end and back-end development
-                skills, as well as a strong sense of development that ensures seamless functionality
-                along with appealing, eye-catching aesthetics. </p>
+                i am a professional Full Stack Web Developer with 2+ years of experience dynamic and
+                user-friendly Web
+                solutions. In my journey in this field have acquired both front-end and back-end development
+                skills, as well as a strong sense of development that ensures seamless functionality and eye-catching aesthetics. </p>
 
               <div className="skill-group m-0">
                 <div
@@ -357,9 +317,6 @@ export default function Index() {
             </div>
 
 
-
-
-
           </div>
 
 
@@ -412,6 +369,33 @@ export default function Index() {
 
         </div>
         {/* ====================================================this is skill section end here==========================================================  */}
+
+
+        {/* ===============================================this is skill section start here==============================================  */}
+        <div id="skill" className="m-0 overflow-hidden py-4">
+
+          <div className="skill-content m-0 mt-2 text-center overflow-hidden" data-aos="zoom-in">
+
+            <div className="px-5">
+              <h2 className="text-center p-3
+                     bg-primary text-white 
+                     text-uppercase fw-bold 
+                     rounded-2 border-8 
+                     border-start border-end
+                      border-warning ">Our Services</h2>
+            </div>
+
+          </div>
+
+          <div className="row p-5">
+            <div className="col-md-3">
+              <ServiceCard/>
+            </div>
+          </div>
+
+        </div>
+        {/* ====================================================this is skill section end here==========================================================  */}
+
 
 
 
