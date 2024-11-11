@@ -10,6 +10,7 @@ function Navbar() {
     };
 
     
+    
     return (
         <header>
             <nav id="section-content" className="px-3 shadow bg-gradient bg-primary py-2 d-flex align-items-center gap-3 rounded-pill">
@@ -21,13 +22,21 @@ function Navbar() {
                     <li className="list-group-item ">
                         <i className="fa-brands fa-servicestack" /></li>
                 </a>
-                <a href="#project" title="project" onClick={()=>handleNavClick(2)} className={`nav-link p-0 m-0 ${activeIndex === 2 ? 'active' : ''} rounded-pill`}>
+
+                <a href="#service" title="My Service" onClick={()=>handleNavClick(2)} className={`nav-link p-0 m-0 ${activeIndex === 2 ? 'active' : ''} rounded-pill`}>
+                    <li className="list-group-item ">
+                     <i className="fa-solid fa-diagram-project"></i> 
+                     </li>  
+                </a>
+
+                
+                <a href="#project" title="My Projects" onClick={()=>handleNavClick(3)} className={`nav-link p-0 m-0 ${activeIndex === 3 ? 'active' : ''} rounded-pill`}>
                     <li className="list-group-item "> <i className="fa-regular fa-image" /></li>
                 </a>
-                <a href="#skill" title="Learned Skill" onClick={()=>handleNavClick(3)} className={`nav-link p-0 m-0 ${activeIndex === 3 ? 'active' : ''} rounded-pill`}>
+                <a href="#skill" title="My Skills" onClick={()=>handleNavClick(4)} className={`nav-link p-0 m-0 ${activeIndex === 4 ? 'active' : ''} rounded-pill`}>
                     <li className="list-group-item "> <i className="fa-solid fa-user-tie" /></li>
                 </a>
-                <a href="#contact" title="Contact" onClick={()=>handleNavClick(4)} className={`nav-link p-0 m-0 ${activeIndex === 4 ? 'active' : ''} rounded-pill`}>
+                <a href="#contact" title="Contact Me" onClick={()=>handleNavClick(5)} className={`nav-link p-0 m-0 ${activeIndex === 5 ? 'active' : ''} rounded-pill`}>
                     <li className="list-group-item "> <i className="fa-solid fa-network-wired" /></li>
                 </a>
             </nav>

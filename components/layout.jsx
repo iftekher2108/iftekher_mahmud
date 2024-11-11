@@ -107,7 +107,7 @@ export default function Layout({ children }) {
         
       </motion.div>
 
-      {/* {currentRoute == "/" ? <Navbar /> : <></>} */}
+      {currentRoute == "/" ? <Navbar /> : <></>}
     </>
   );
 }

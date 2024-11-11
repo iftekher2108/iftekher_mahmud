@@ -19,6 +19,7 @@ function TypeName() {
       typeSpeed: 60,
       backDelay: 500,
       backSpeed: 60,
+      showCursor: false,
       loop: !0,
     });
 
