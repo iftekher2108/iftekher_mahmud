@@ -257,9 +257,10 @@ nav#section-content {
     .first_name {
         font-size: 45px;
         color: $primary;
-        font-weight:bolder;
+        font-weight: bolder;
         text-transform: uppercase;
     }
+
     .last_name {
         font-size: 45px;
         font-weight: bolder;
@@ -277,8 +278,10 @@ nav#section-content {
 
     .skill-base {
         width: 100%;
+
         h3 {
             position: relative;
+
             &::before {
                 content: "";
                 position: absolute;
@@ -1066,4 +1069,15 @@ form {
     #about-me .about-content .content-section img {
         width: 100%
     }
+
+    .hero-content {
+        .first_name {
+            font-size: 30px;
+        }
+
+        .last_name {
+            font-size: 30px;
+        }
+    }
+
 }
