@@ -403,8 +403,7 @@ nav#section-content {
             li {
                 font-size: 13px;
                 padding: 10px 10px;
-                color: $white;
-
+                color: $dark;
                 &:hover {
                     color: $primary;
                 }
@@ -413,6 +412,23 @@ nav#section-content {
         }
     }
 }
+
+
+
+[data-bs-theme=dark] {
+    #service {
+        .card{
+            ul{
+                li{
+                   color: $white; 
+                   &:hover{
+                    color: $primary;
+                   }
+                }
+            }
+        }
+    }
+  }
 
 // service section
 

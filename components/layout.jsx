@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion,AnimatePresence} from "framer-motion";
 import Navbar from "./Navbar";
+import Theme from "./Theme";
 import "@/assets/custom-boot/custom-bootstrap.min.css";
 import "@/assets/plugins/fontawesome/css/all.min.css";
 import "@/assets/plugins/animate/animate.min.css";
@@ -10,10 +11,14 @@ import AOS from "aos";
 import { useRouter } from "next/router";
 export default function Layout({ children }) {
   const currentRoute = useRouter().pathname;
+  const [theme,setTheme] = useState('dark');
 
  const delay = currentRoute == '/' ? 2.8 : 0
   useEffect(() => {
+    // bootstrap js
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
+
+    // aos init
     AOS.init({
       startEvent: "DOMContentLoaded",
       initClassName: "aos-init",
@@ -26,6 +31,7 @@ export default function Layout({ children }) {
       once: true,
     });
 
+    // intro section
     if(currentRoute == '/'){
   const e = document.querySelector(".intro")
     setTimeout(() => {
@@ -36,17 +42,22 @@ export default function Layout({ children }) {
       e.classList.add("hide")
     }, 5000)
     }
-    
+
+    // image drag security
     const images = document.getElementsByTagName("img");
     for (const image of images) {
       image.addEventListener("mousedown", function (t) {
         t.preventDefault();
-      });
+      }); 
     }
-  }, []);
+
+  },[theme,currentRoute]);
+
+
 
   return (
     <>
+    <Theme theme={theme} setTheme={setTheme} />
       {currentRoute == "/" ? (
         <div className="animate__animated intro d-flex flex-column align-items-center justify-content-center">
           <div className="col-md-3 col-5">

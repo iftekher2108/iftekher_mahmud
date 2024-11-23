@@ -1,31 +1,40 @@
+import { useEffect, useState } from "react";
+function Theme({theme,setTheme}) {
 
-function Theme({ theme, setTheme }) {
 
+    const [checkbox,setCheckbox] = useState(true)
 
-   const themeSwitch = (e)=> {
-        if(e.target.checked) {
-            setTheme('dark')
-        }
-        else {
-            setTheme('light')
-        }
+   const themeSwitch =(e)=> {
+    if (theme === 'dark') {
+        // document.documentElement.setAttribute('data-bs-theme','light')
+        setTheme('light')
+        setCheckbox(false)
     }
+    else {
+        setTheme('dark')
+        setCheckbox(true)
+    }
+    }
+    
+    useEffect(()=>{
+        document.documentElement.setAttribute('data-bs-theme',`${theme}`)
+    },[theme])
 
 
     return(
      <>
         {/* <!-- theme switch --> */}
-        <div class="theme-btn px-1 py-3">
-            <div class="form-check form-switch">
+        <div className="theme-btn px-1 py-3">
+            <div className="form-check form-switch">
                 <input
-                    class="form-check-input shadow-none"
+                    className="form-check-input shadow-none"
                     type="checkbox"
                     role="switch"
                     id="flexSwitchCheckChecked"
-                    onChange={(e) => themeSwitch(e) }
-                    checked={theme ? 'checked' :'false'}
+                    onChange={(e) => themeSwitch(e.target.value)}
+                    checked={checkbox}
                 />
-                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                <label className="form-check-label" htmlFor="flexSwitchCheckChecked"></label>
             </div>
         </div>
         {/* <!-- theme switch --> */}
