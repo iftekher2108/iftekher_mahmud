@@ -428,14 +428,6 @@ export default function Index() {
             <h5>Mysql</h5>
           </div>
 
-          <div className="card p-3" style={{ border: "2px solid #FE5A4F" }}>
-            <i
-              className="fa-brands mb-1 fa-laravel"
-              style={{ color: "#FE5A4F" }}
-            ></i>
-            <h5>Laravel</h5>
-          </div>
-
           <div className="card p-3" style={{ border: "2px solid #41B882" }}>
             <Image
               src="/image/vue.jpeg"
@@ -456,7 +448,7 @@ export default function Index() {
             <h5>React</h5>
           </div>
 
-          <div className="card p-3" style={{ border: "2px solid #F2F3EE" }}>
+          {/* <div className="card p-3" style={{ border: "2px solid #F2F3EE" }}>
             <Image
               src="/image/nextjs.png"
               height={100}
@@ -466,7 +458,7 @@ export default function Index() {
               alt="icon"
             />
             <h5>Next js</h5>
-          </div>
+          </div> */}
 
           <div className="card p-3" style={{ border: "2px solid #7E67ED" }}>
             <Image
@@ -480,7 +472,15 @@ export default function Index() {
             <h5>Inertia</h5>
           </div>
 
-          <div className="card p-3" style={{ border: "2px solid #0087CB" }}>
+          <div className="card p-3" style={{ border: "2px solid #FE5A4F" }}>
+            <i
+              className="fa-brands mb-1 fa-laravel"
+              style={{ color: "#FE5A4F" }}
+            ></i>
+            <h5>Laravel</h5>
+          </div>
+
+          {/* <div className="card p-3" style={{ border: "2px solid #0087CB" }}>
             <Image
               src="/image/dart.png"
               height={100}
@@ -490,9 +490,9 @@ export default function Index() {
               alt="icon"
             />
             <h5>Dart</h5>
-          </div>
+          </div> */}
 
-          <div className="card p-3" style={{ border: "2px solid #29B4F4" }}>
+          {/* <div className="card p-3" style={{ border: "2px solid #29B4F4" }}>
             <Image
               src="/image/flutter.png"
               height={100}
@@ -502,7 +502,8 @@ export default function Index() {
               alt="icon"
             />
             <h5>Flutter</h5>
-          </div>
+          </div> */}
+
         </div>
 
         <h2 className="fw-bold  mt-4 text-center">

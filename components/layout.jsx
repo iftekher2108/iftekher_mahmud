@@ -97,9 +97,9 @@ export default function Layout({ children }) {
       </div> */}
       {/* background web  */}
 
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
 
-      </AnimatePresence>
+      </AnimatePresence> */}
       <motion.div
         initial={{ scaleX: 0, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 1 }}
